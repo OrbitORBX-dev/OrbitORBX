@@ -28,7 +28,7 @@ amount = "40,000,000"
 allocation = "20%"
 amount = "20000000" 
 
-[distribution.partners
+[distribution.partners]
 allocation = "15%"
 amount = "15000000" 
 
@@ -70,6 +70,7 @@ coldStorage = true
 type = "Decentralized"
 
 votingMechanism = "Community Voting"
+
 
 
 
