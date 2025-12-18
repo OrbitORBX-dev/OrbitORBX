@@ -7,7 +7,7 @@ ACCOUNTS=[
   "<GAJUZ3LR4DLJAUQPZT2MKPUOHVEYH6QZRYZOQXNP3R2VRXUD53PVUVCK>"
 ]
 
-"Line"="Token Information"
+"block"="Token Information"
 name = "Alnitak"
 symbol = "xALT"
 decimals = 7
@@ -18,7 +18,7 @@ blockchain = "Stellar"
 consensusMechanism = "Federated Byzantine Agreement (FBA)"
 network = "Public" 
 
-"Line"="Token Distribution"
+"group"="Token Distribution"
 [distribution]
 [distribution.community]
 allocation = "40%"
@@ -70,6 +70,7 @@ coldStorage = true
 type = "Decentralized"
 
 votingMechanism = "Community Voting"
+
 
 
 
