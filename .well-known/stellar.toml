@@ -60,7 +60,7 @@ description = "Orion Group is a global organisation dedicated to promoting devel
 "Contact Information"="info"
 [contact]
 email = "info@alnitaknet.online "
-website = "https://www.alnitaknet.online 
+website = "https://www.alnitaknet.online" 
 
 [security]
 multiSignatureWallets = true
@@ -70,6 +70,7 @@ coldStorage = true
 type = "Decentralized"
 
 votingMechanism = "Community Voting"
+
 
 
 
