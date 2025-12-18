@@ -7,18 +7,18 @@ ACCOUNTS=[
   "<GAJUZ3LR4DLJAUQPZT2MKPUOHVEYH6QZRYZOQXNP3R2VRXUD53PVUVCK>"
 ]
 
-Token Information
+"Line"="Token Information"
 name = "Alnitak"
 symbol = "xALT"
 decimals = 7
 totalSupply = "100000000," 
 
-Blockchain Configuration
+"Line"="Blockchain Configuration"
 blockchain = "Stellar"
 consensusMechanism = "Federated Byzantine Agreement (FBA)"
 network = "Public" 
 
-Token Distribution
+"Line"="Token Distribution"
 [distribution]
 [distribution.community]
 allocation = "40%"
@@ -36,12 +36,12 @@ amount = "15000000"
 allocation = "25%"
 amount = "25000000" 
 
-Token Economics
+"Tokenomics"="Token Economics'
 [tokenomics]
 tokenType = "Utility Token"
 useCases = ["Infrastructure", "Event Ticketing", "Merchandise Purchase"] 
 
-Use Cases
+"Use"="Use Cases"
 [useCases]
 [useCases.Infrastructure]
 description = "xALT tokens will be used to fund infrastructural development projects in Africa and worldwide." 
@@ -52,12 +52,12 @@ description = "xALT tokens will be used to purchase tickets for events and other
 [useCases.merchandisePurchase]
 description = "xALT tokens will be used to purchase various merchandise." 
 
-Organisation Information
+"Organisation Information"="info"
 [organisation]
 name = "Orion Group"
 description = "Orion Group is a global organisation dedicated to promoting development and infrastructural growth in Africa and worldwide. Orion group issues xALT, a non-referenced digital asset on Stellar."
 
-Contact Information
+"Contact Information"="info"
 [contact]
 email = "info@alnitaknet.online "
 website = "https://www.alnitaknet.online 
@@ -70,5 +70,6 @@ coldStorage = true
 type = "Decentralized"
 
 votingMechanism = "Community Voting"
+
 
 
