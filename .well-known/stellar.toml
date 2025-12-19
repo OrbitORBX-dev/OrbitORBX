@@ -12,9 +12,9 @@ ORG_SUPPORT_EMAIL="support@alnitaknet.online"
 ORG_DESCRIPTION="Alnitak is a non Anchor-Based utility token on Stellar"
 
 [[CURRENCIES]]
-Token Name="Alnitak"
+TokenName="Alnitak"
 code="xALT"
-decimals ="7"
+decimals="7"
 totalSupply = "100000000"
 issuer="GCKSI3G65TXQ7KMSEQY4FUHQONZ5YLJIVI5VUYHSV4ILHNQHQSC325UA"
 is_asset_anchored=false
@@ -23,35 +23,36 @@ image="https://drive.google.com/file/d/1HoPD7ovBOKFZ_WvFi89lT1LqXtIMNIyK/view?us
 
 [[Token Distribution]]
 distribution.community
- allocation = "50%"
-  amount = "50000000"
+ allocation="50%"
+  amount="50000000"
   
 distribution.team
- allocation = "20%"
-  amount = "20000000"
+ allocation="20%"
+  amount="20000000"
 
 distribution.partners
-allocation = "10%"
-  amount = "10000000"
+allocation="10%"
+  amount="10000000"
 
 distribution.reserves
-  allocation = "20%"
-  amount = "20000000"
+  allocation="20%"
+  amount="20000000"
 
 [security]
-  multiSignatureWallets = true
-  coldStorage = true
+  multiSignatureWallets=true
+  coldStorage=true
 
 [governance]
-  type = "Decentralized"
-  votingMechanism = "Proof of Stake (PoS)"
+  type="Decentralized"
+  votingMechanism="Proof of Stake (PoS)"
 
 [contact]
-  email = "info@alnitaknet.online"
-  website = "https://www.alnitaknet.online"
+  email="info@alnitaknet.online"
+  website="https://www.alnitaknet.online"
 
 [[PRINCIPALS]]
 name="Orion Group"
 email="info@alnitaknet.online"
 
   
+
