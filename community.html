@@ -1,0 +1,99 @@
+import React from 'react';
+import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { Rocket, Users, Shield, Zap } from 'lucide-react';
+
+const AlnitakCommunityPage = () => {
+  const { address, isConnected } = useAccount();
+  const { connect, connectors } = useConnect();
+  const { disconnect } = useDisconnect();
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-6 border-b border-white/10 backdrop-blur-md sticky top-0 z-50">
+        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+          ALNITAK
+        </div>
+        <div className="flex gap-4">
+          {isConnected ? (
+            <button 
+              onClick={() => disconnect()}
+              className="bg-red-500/10 hover:bg-red-500/20 text-red-400 px-4 py-2 rounded-lg border border-red-500/50 transition"
+            >
+              {address?.slice(0, 6)}...{address?.slice(-4)} (Disconnect)
+            </button>
+          ) : (
+            connectors.map((connector) => (
+              <button
+                key={connector.id}
+                onClick={() => connect({ connector })}
+                className="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-2 rounded-lg transition shadow-lg shadow-cyan-900/20"
+              >
+                Connect Wallet
+              </button>
+            ))
+          )}
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="relative pt-24 pb-32 px-6 text-center overflow-hidden">
+        {/* Stellar Background Effect */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-cyan-400 rounded-full blur-[100px]"></div>
+        </div>
+
+        <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter">
+          Join the <span className="text-cyan-400">Soul Fam.</span>
+        </h1>
+        <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          The brightest star in Orion’s belt is now the center of a new financial nebula. 
+          Hold Alnitak, govern the future, and light up the decentralized sky.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <a href="#" className="bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition flex items-center gap-2">
+            <Users size={20}/> Join Discord
+          </a>
+          <a href="#" className="bg-slate-800 border border-white/10 px-8 py-4 rounded-full font-bold hover:bg-slate-700 transition">
+            View Roadmap
+          </a>
+        </div>
+      </header>
+
+      {/* Features Grid */}
+      <section className="grid md:grid-cols-3 gap-8 px-6 max-w-7xl mx-auto py-20 border-t border-white/5">
+        <FeatureCard 
+          icon={<Shield className="text-cyan-400" />}
+          title="Safe Harbor"
+          desc="Audited smart contracts and locked liquidity to ensure your stars stay aligned."
+        />
+        <FeatureCard 
+          icon={<Zap className="text-yellow-400" />}
+          title="Supergiant Speed"
+          desc="Optimized for low-gas transactions across the Orion ecosystem."
+        />
+        <FeatureCard 
+          icon={<Rocket className="text-purple-400" />}
+          title="To the Nebula"
+          desc="Exclusive NFT drops and staking rewards for our early Alnitak pioneers."
+        />
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-12 border-t border-white/5 text-slate-500">
+        <p>© 2025 Alnitak Token Ecosystem. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
+
+const FeatureCard = ({ icon, title, desc }) => (
+  <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-cyan-500/50 transition group">
+    <div className="mb-4 p-3 bg-slate-900 rounded-xl w-fit group-hover:scale-110 transition">{icon}</div>
+    <h3 className="text-xl font-bold mb-3">{title}</h3>
+    <p className="text-slate-400 leading-relaxed">{desc}</p>
+  </div>
+);
+
+export default AlnitakCommunityPage;
