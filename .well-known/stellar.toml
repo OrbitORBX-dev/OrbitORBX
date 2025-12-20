@@ -9,13 +9,12 @@ ORG_LOGO="https://drive.google.com/file/d/1HoPD7ovBOKFZ_WvFi89lT1LqXtIMNIyK/view
 ORG_PHYSICAL_ADDRESS="Calabar,Nigeria"
 ORG_OFFICIAL_EMAIL="official@alnitaknet.online"
 ORG_SUPPORT_EMAIL="support@alnitaknet.online"
-ORG_DESCRIPTION="Alnitak is a non Anchor-Based utility token on Stellar"
+ORG_DESCRIPTION="Alnitak is a non Anchor-Based utility token on the Stellar Blockchain. It is permanently Capped at 100,000,000 total Supply"
 
 [[CURRENCIES]]
-tokename="Alnitak"
+name="Alnitak"
 code="xALT"
-decimals="7"
-totalsupply="100000000"
+display_decimals="7"
 issuer="GCKSI3G65TXQ7KMSEQY4FUHQONZ5YLJIVI5VUYHSV4ILHNQHQSC325UA"
 is_asset_anchored=false
 desc="Alnitak is a utility token on Stellar"
@@ -24,3 +23,4 @@ image="https://drive.google.com/file/d/1HoPD7ovBOKFZ_WvFi89lT1LqXtIMNIyK/view?us
 [[PRINCIPALS]]
 name="Orion Group"
 email="info@alnitaknet.online"
+
