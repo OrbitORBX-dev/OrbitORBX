@@ -9,7 +9,7 @@ ORG_DESCRIPTION="Orbit ORBX is a non Anchor-Based utility token on the Stellar B
 ORG_OFFICIAL_EMAIL="official@orbitorbx.online"
 ORG_SUPPORT_EMAIL="support@orbitorbx.online"
 ORG_PHYSICAL_ADDRESS="Cal, Nigeria"
-ORG_LOGO="https://github.com/orbitorbx-dev/orbitorbx/blob/main/.assets/logo.png"
+ORG_LOGO="https://github.com/OrbitORBX-dev/OrbitORBX/blob/main/.assets/logo.png"
 
 
 [[CURRENCIES]]
@@ -19,10 +19,11 @@ status = "live"
 display_decimals="7"
 is_asset_anchored=false
 desc="Alnitak is a utility token on Stellar"
-image="https://github.com/orbitorbx-dev/orbitorbx/blob/main/.assets/logo.png"
+image="https://github.com/OrbitORBX-dev/OrbitORBX/blob/main/.assets/logo.png"
 
 [[PRINCIPALS]]
 name="EMINENCE"
+
 
 
 
