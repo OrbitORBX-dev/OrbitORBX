@@ -4,12 +4,12 @@ ACCOUNTS = ["GCQD5F4QP3AZIBJAIK5LZGCY3TCA65KG3XUF25WQ2BVFVRKLX7277J57","GA67JGLP
 
 [DOCUMENTATION]
 ORG_NAME="Orbit"
-ORG_URL="https://orbitorbx-dev.github.io/OrbitORBX/"
+ORG_URL="https://orbitx.online"
 ORG_DESCRIPTION="Orbit ORBX is a non Anchor-Based utility token on the Stellar Blockchain. It is permanently Capped at 100,000,000 total Supply"
-ORG_OFFICIAL_EMAIL="official@orbitorbx.online"
-ORG_SUPPORT_EMAIL="support@orbitorbx.online"
+ORG_OFFICIAL_EMAIL="official@orbitx.online"
+ORG_SUPPORT_EMAIL="support@orbitx.online"
 ORG_PHYSICAL_ADDRESS="Cal, Nigeria"
-ORG_LOGO="https://github.com/OrbitORBX-dev/OrbitORBX/blob/97609b5361b3d7d7dae30a325ddff4bf1a1cd547/logo.png"
+ORG_LOGO="https://orbitx.online/assets/orbx-logo.png"
 
 
 [[CURRENCIES]]
@@ -18,11 +18,12 @@ issuer="GCQD5F4QP3AZIBJAIK5LZGCY3TCA65KG3XUF25WQ2BVFVRKLX7277J57"
 status = "live"
 display_decimals="7"
 is_asset_anchored=false
-desc="Alnitak is a utility token on Stellar"
-image="https://github.com/OrbitORBX-dev/OrbitORBX/blob/main/.assets/logo.png"
+desc="Orbit is a utility token on Stellar"
+image="https://orbitx.online/assets/orbx-logo.png"
 
 [[PRINCIPALS]]
 name="EMINENCE"
+
 
 
 
