@@ -1,40 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORBX | Stellar-Speed Assets</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="fonts.googleapis.com" rel="stylesheet">
-    <style>
-        :root {
-            --stellar-blue: #080f27;
-            --stellar-glow: #3b82f6;
-            --orbx-silver: #e2e8f0;
-        }
-        body {
-            background-color: var(--stellar-blue);
-            color: white;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-image: 
-                radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.15), transparent),
-                radial-gradient(circle at 0% 100%, rgba(30, 41, 59, 0.5), transparent);
-        }
-        .stellar-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-        }
-        .orbit-path {
-            stroke-dasharray: 4;
-            animation: dash 20s linear infinite;
-        }
-        @keyframes dash { to { stroke-dashoffset: -100; } }
-    </style>
-   <!-- Long Story Box -->
-            <div class="lg:col-span-8 glass p-10">
-                <h2 class="text-3xl font-bold mb-6">Why We Built This</h2>
-                <p class="text-gray-300 leading-relaxed mb-4">
-  Orbit Token (ORBX)
+Orbit Token (ORBX)
 A Stellar-Based Digital Asset for Payments, Utility, and Sustainable Growth
 Whitepaper – Version 1.0
 Launch Era: 2026 and Beyond
@@ -288,4 +252,3 @@ The following checklist reflects a pass condition for Stellar Expert:
 [✓] Issuer locked (master weight = 0) 
 [✓] Organization clearly identified 
 [✓] Asset intent documented
-</main>
