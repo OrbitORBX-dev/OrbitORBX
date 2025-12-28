@@ -41,29 +41,9 @@ On-chain visibility of all token movements
 
 Launch of official community channels
 
-
-
 ---
 
-Phase 3 — ORBX Betting Utility
-
-Objective: Activate core functional utility through a non-custodial betting platform.
-
-Beta launch of Orion Group betting platform
-
-ORBX used as the interaction token for betting activities
-
-Wallet-based access using Stellar-compatible wallets
-
-On-chain settlement using predefined execution logic
-
-No centralized custody of user funds
-
-
-
----
-
-Phase 4 — Orion Group Membership Utility
+Phase 3 — Orion Group Membership Utility
 
 Objective: Provide service-based access within the Orion Group ecosystem.
 
@@ -79,7 +59,7 @@ No ownership, equity, or profit rights conveyed
 
 ---
 
-Phase 5 — Governance & Community Participation
+Phase 4 — Governance & Community Participation
 
 Objective: Encourage community involvement without financial obligations.
 
@@ -95,7 +75,7 @@ Periodic transparency and progress updates
 
 ---
 
-Phase 6 — Long-Term Sustainability
+Phase 5 — Long-Term Sustainability
 
 Objective: Maintain relevance and alignment beyond market cycles.
 
