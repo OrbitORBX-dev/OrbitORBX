@@ -18,11 +18,12 @@ issuer="GCQD5F4QP3AZIBJAIK5LZGCY3TCA65KG3XUF25WQ2BVFVRKLX7277J57"
 status = "live"
 display_decimals="7"
 is_asset_anchored=false
-desc="Orbit is a utility token on Stellar"
+desc="Orbit is the utility token of the Orion group ecosystem"
 image="https://orbitx.online/assets/orbx-logo.png"
 
 [[PRINCIPALS]]
 name="EMINENCE"
+
 
 
 
