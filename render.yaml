@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: orbitrbx
+    headers:
+      - path: /.well-known/stellar.toml
+        name: Content-Type
+        value: text/plain
