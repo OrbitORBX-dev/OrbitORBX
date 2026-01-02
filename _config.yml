@@ -1,2 +1,2 @@
-exclude:
-  - ".well-known/stellar.toml"
+Prevent Jekyll from processing .well-known folder
+exclude: [".well-known"]
