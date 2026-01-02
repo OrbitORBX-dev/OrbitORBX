@@ -1,2 +1,0 @@
-Prevent Jekyll from processing .well-known folder
-exclude: [".well-known"]
