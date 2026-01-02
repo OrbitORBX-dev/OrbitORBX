@@ -95,7 +95,7 @@ To become a reliable Stellar-native utility token that users *use*, not just tra
 
 **Goal:** Make ORBX *useful*
 
-* Launch ORBX-powered web utility (e.g., prediction or engagement platform)
+* Launch ORBX-powered web utility
 * ORBX as stake + reward token
 * Transaction-based token sinks
 * Reward dashboard for users
