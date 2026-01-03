@@ -1,15 +1,15 @@
 # General Information
 
 [[PRINCIPALS]]
-org_name = "Orion Group"
-org_url = "https://orbxorion.online/orion-group"
-org_desc = "Orion Group develops utility-focused blockchain solutions on Stellar, with ORBX serving as the core token for staking, rewards, payments, and ecosystem participation."
-org_official_email = "official@orbxorion.online"
-org_support_email = "support@orbxorion.online"
-org_physical_address = "Cal, Nigeria"
-name = "EMINENCE"
-github = "https://github.com/OrbitORBX-dev"
-twitter = "@orbxorion"
+ORG_NAME = "Orion Group"
+ORG_URL = "https://orbxorion.online/orion-group"
+ORG_DESC = "Orion Group develops utility-focused blockchain solutions on Stellar, with ORBX serving as the core token for staking, rewards, payments, and ecosystem participation."
+ORG_OFFICIAL_EMAIL = "official@orbxorion.online"
+ORG_SUPPORT_EMAIL = "support@orbxorion.online"
+ORG_PHYSICAL_ADDRESS = "Cal, Nigeria"
+NAME = "EMINENCE"
+GITHUB = "https://github.com/OrbitORBX-dev"
+TWITTER = "@orbxorion"
 
 
 [[CURRENCIES]]
