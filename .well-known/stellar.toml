@@ -4,7 +4,6 @@ ACCOUNTS = ["GDYTQGDGHRXOIWANOUB4DY6BTKMMWTF5PVJC2KZVT6VFP5TYD7W63XO7","GDTTLA5F
 
 [DOCUMENTATION]
 ORG_NAME = "Orion group"
-ORG_URL = "https://orbxorion.online/orion-group"
 ORG_DESCRIPTION = "Orion Group develops utility-focused blockchain solutions on Stellar, with ORBX serving as the core token for staking, rewards, payments, and ecosystem participation."
 ORG_OFFICIAL_EMAIL = "official@orbxorion.online"
 ORG_SUPPORT_EMAIL = "support@orbxorion.online"
