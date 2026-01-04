@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$TOKEN Airdrop 2026 | Register Now</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="unpkg.com"></script>
+    <style>
+        @import url('fonts.googleapis.com');
+        body { font-family: 'Inter', sans-serif; background: #0f172a; color: white; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
+
+    <!-- Header Section -->
+    <div class="text-center mb-10">
+        <div class="bg-blue-500 text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full inline-block mb-4">Live for Q1 2026</div>
+        <h1 class="text-5xl font-extrabold mb-2 tracking-tight">$TOKEN Ecosystem Airdrop</h1>
+        <p class="text-slate-400 text-lg">Submit your wallet to join the next generation of DeFi.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl w-full">
+        
+        <!-- Left Side: Rules Card -->
+        <div class="glass p-8 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <i data-lucide="scroll-text" class="mr-2 text-blue-400"></i> Airdrop Rules
+            </h2>
+            <ul class="space-y-4 text-slate-300">
+                <li class="flex items-start">
+                    <i data-lucide="check-circle-2" class="mr-3 text-green-500 shrink-0 mt-1"></i>
+                    <span>One entry per unique IP address to prevent Sybil attacks.</span>
+                </li>
+                <li class="flex items-start">
+                    <i data-lucide="check-circle-2" class="mr-3 text-green-500 shrink-0 mt-1"></i>
+                    <span>Wallet must have a minimum balance of 0.01 ETH/BNB (Snapshot date: Jan 2026).</span>
+                </li>
+                <li class="flex items-start">
+                    <i data-lucide="check-circle-2" class="mr-3 text-green-500 shrink-0 mt-1"></i>
+                    <span>Tokens will be distributed directly to your wallet within 14 days of campaign end.</span>
+                </li>
+                <li class="flex items-start">
+                    <i data-lucide="alert-triangle" class="mr-3 text-yellow-500 shrink-0 mt-1"></i>
+                    <span class="text-sm italic">Never share your Seed Phrase or Private Keys with anyone.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Wallet Submission -->
+        <div class="glass p-8 rounded-3xl flex flex-col justify-between">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i data-lucide="wallet" class="mr-2 text-blue-400"></i> Register Wallet
+                </h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">EVM Compatible Address</label>
+                        <input id="walletInput" type="text" placeholder="0x..." 
+                            class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                    <button onclick="submitWallet()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition duration-200">
+                        Join Airdrop
+                    </button>
+                    <p id="msg" class="text-center text-sm font-medium hidden"></p>
+                </div>
+            </div>
+
+            <!-- Admin Section (For you to collect the data) -->
+            <div class="mt-8 pt-6 border-t border-slate-700">
+                <button onclick="downloadData()" class="text-xs text-slate-500 hover:text-slate-300 flex items-center mx-auto">
+                    <i data-lucide="download" class="w-3 h-3 mr-1"></i> Download Collected Addresses (Admin)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      <!-- Load Supabase JS Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+    // Initialize Icons
+    lucide.createIcons();
+
+    // 1. YOUR SUPABASE CONFIGURATION
+    const SUPABASE_URL = 'https://uavuulciatgbvfvnpkos.supabase.co'; // Replace with yours
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhdnV1bGNpYXRnYnZmdm5wa29zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc0OTI1MDQsImV4cCI6MjA4MzA2ODUwNH0.mNOmOr_qNUgQAg_-nRZyXZYoizsTevgjVGPNUl7Bf6w';           // Replace with yours
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function submitWallet() {
+        const input = document.getElementById('walletInput');
+        const msg = document.getElementById('msg');
+        const wallet = input.value.trim();
+
+        // EVM Address Validation
+        const isValid = /^0x[a-fA-F0-9]{40}$/.test(wallet);
+
+        if (!isValid) {
+            msg.textContent = "Invalid Wallet Address.";
+            msg.className = "text-center text-sm font-medium text-red-400 block mt-4";
+            return;
+        }
+
+        msg.textContent = "Sending to blockchain network...";
+        msg.className = "text-center text-sm font-medium text-blue-400 block mt-4";
+
+        // 2. INSERT INTO SUPABASE
+        const { data, error } = await supabase
+            .from('airdrop_registrations')
+            .insert([{ wallet_address: wallet }]);
+
+        if (error) {
+            if (error.code === '23505') { // Unique constraint error
+                msg.textContent = "This wallet is already registered.";
+                msg.className = "text-center text-sm font-medium text-yellow-400 block mt-4";
+            } else {
+                msg.textContent = "Error: " + error.message;
+                msg.className = "text-center text-sm font-medium text-red-400 block mt-4";
+            }
+        } else {
+            input.value = '';
+            msg.textContent = "Successfully Registered to Database!";
+            msg.className = "text-center text-sm font-medium text-green-400 block mt-4";
+        }
+    }
+
+    // Admin function to view data (Optional - usually done in Supabase Dashboard)
+    async function downloadData() {
+        const { data, error } = await supabase.from('airdrop_registrations').select('*');
+        if (error) return alert("Error fetching data");
+        
+        let csvContent = "data:text/csv;charset=utf-8,Wallet Address,Timestamp\n" 
+            + data.map(e => `${e.wallet_address},${e.timestamp}`).join("\n");
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "supabase_airdrop_export.csv");
+        document.body.appendChild(link);
+        link.click();
+    }
+</script>
+
+    </script>
+</body>
+</html>
