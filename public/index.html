@@ -77,9 +77,7 @@
             <span class="text-2xl font-extrabold tracking-tight">ORBX</span>
         </div>
         <div class="hidden lg:flex space-x-12 text-sm uppercase tracking-widest text-slate-400">
-            <a href="about" class="hover:text-white transition">ABOUT</a>
-            <a href="WHITEPAPER.md" class="hover:text-white transition">WHITEPAPER</a>
-            <a href="Roadmap" class="hover:text-white transition">ROADMAP</a>
+            <a href="#Stellar airdrop" class="hover:text-white transition">Air drop >Aa>
         </div>
         <a href="https://scopuly.com/trade/ORBX-XLM/GDYTQGDGHRXOIWANOUB4DY6BTKMMWTF5PVJC2KZVT6VFP5TYD7W63XO7/native"
             class="bg-white text-black px-7 py-2.0 rounded text-sm font-bold hover:scale-105 transition-transform">
@@ -155,18 +153,54 @@
             </div>
         </div>
     </section>
+    <!-- Stellar Airdrop Form via Web3Forms -->
+<div class="airdrop-container" style="max-width: 450px; margin: auto; padding: 25px; border: 2px solid #086cd9; border-radius: 12px; background: #fff; font-family: sans-serif;">
+    <h3 style="color: #086cd9;">Join ORBX Whitelist</h3>
+    
+    <form action="https://api.web3forms.com/submit" method="POST" id="airdrop-form">
+         -->
+        <input type="hidden" name="access_key" value="0886be79-979c-4fae-a2dc-8d8ab7b7fa41">
+        
+        <!-- Anti-Spam (Honeypot) -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <!-- Roadmap Embed -->
-    <!-- The iframe was inside the body tags, but outside the main layout container. Wrapped in a div for better layout control -->
-    <div class="max-w-7xl mx-auto px-10">
-        <iframe class="roadmap-frame" src="https://orbxorion.online/README.md"
-            title="ORBX Roadmap"></iframe>
-    </div>
+        <div style="margin-bottom: 15px;">
+            <label for="stellar_address">Stellar Public Key (G...):</label>
+            <input type="text" id="stellar_address" name="stellar_address" 
+                   placeholder="GDU4D7BPCGXXELMXN32..." required 
+                   pattern="^G[A-Z2-7]{55}$" 
+                   title="Must be a 56-character Stellar address starting with G"
+                   style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px; font-family: monospace;">
+        </div>
 
-    <!-- Bot Link -->
-    <a href="t.me/orion_orbx_bot" class="bot-link" target="_blank">
-        Earn ORBX with our Bot
-    </a>
+        <div style="margin-bottom: 15px;">
+            <label for="email">Contact Email (Optional):</label>
+            <input type="email" name="email" id="email" 
+                   placeholder="you@example.com"
+                   style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px;">
+        </div>
+
+        <!-- Custom Redirect after submission (Optional) -->
+        <input type="hidden" name="redirect" value="orbxorion.online">
+
+        <button type="submit" style="width: 100%; padding: 15px; background: #086cd9; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem;">
+            Register for Airdrop
+        </button>
+        
+        <p id="form-status" style="margin-top: 15px; text-align: center; font-size: 0.9rem;"></p>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('airdrop-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function(e) {
+        // Native HTML5 validation handles the Regex check via the 'pattern' attribute.
+        status.innerText = "Processing submission...";
+        status.style.color = "blue";
+    });
+</script>
 
 </body>
 
